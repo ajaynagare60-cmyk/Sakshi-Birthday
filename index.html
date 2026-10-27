@@ -1,0 +1,693 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Sakshi 🌷</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --pink: #d94f87;
+  --text: #70445a;
+  --gold: #d7ae69;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, #fff5f8, #ffe5ef, #fffaf4);
+  overflow-x: hidden;
+}
+
+section {
+  position: relative;
+  z-index: 1;
+  padding: 85px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.9;
+}
+
+.script {
+  font-family: 'Great Vibes', cursive;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 30px;
+  background: var(--pink);
+  color: white;
+  padding: 13px 25px;
+  margin: 10px 5px;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 6px 18px #d94f8730;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: #bd3d72;
+}
+
+/* SUBTLE FLOWER BACKGROUND */
+
+.bg-flowers {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-flower {
+  position: absolute;
+  bottom: -40px;
+  font-size: 17px;
+  opacity: 0;
+  animation: flowerRise linear infinite;
+  user-select: none;
+}
+
+@keyframes flowerRise {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.12;
+  }
+  85% {
+    opacity: 0.12;
+  }
+  100% {
+    transform: translateY(-115vh) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fff0f7dd, #fbd6e6dd, #fff8efdd);
+  padding-top: 60px;
+}
+
+.kicker {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  color: #a36b83;
+}
+
+.hero h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(4rem, 12vw, 7.5rem);
+  line-height: 1.15;
+  color: var(--pink);
+  text-shadow: 0 5px 20px #d94f8718;
+}
+
+.hero h2 {
+  margin-top: 12px;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+.hero p {
+  max-width: 580px;
+  margin: 0 auto 20px;
+  padding: 0 10px;
+}
+
+.flower-row {
+  font-size: 1.5rem;
+  margin: 15px 0;
+  letter-spacing: 5px;
+}
+
+.scroll-note {
+  margin-top: 25px;
+  font-size: 0.85rem;
+  animation: gentleFloat 2s infinite;
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* CARDS */
+
+.card {
+  max-width: 800px;
+  margin: 25px auto 0;
+  padding: clamp(25px, 5vw, 45px);
+  border: 1px solid #e9bfd0;
+  border-radius: 25px;
+  background: #ffffffed;
+  box-shadow: 0 12px 35px #a74e6c12;
+}
+
+.memory-date {
+  display: inline-block;
+  background: #fff7fb;
+  border: 1px solid #e5bfd0;
+  color: var(--pink);
+  border-radius: 25px;
+  padding: 8px 18px;
+  margin-bottom: 20px;
+}
+
+.memory-flower {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+/* COUNTDOWN */
+
+.countdown-section {
+  background: #fff4f9e8;
+}
+
+.countdown {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.time-box {
+  min-width: 95px;
+  padding: 18px 13px;
+  border: 1px solid #eac2d3;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 8px 22px #c96c8e12;
+}
+
+.time-box span {
+  display: block;
+  font-size: clamp(1.7rem, 5vw, 2.5rem);
+  font-weight: 600;
+  color: var(--pink);
+}
+
+.time-box small {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+}
+
+#countdownMessage {
+  margin-top: 25px;
+  color: var(--pink);
+}
+
+/* BIRTHDAY LETTER */
+
+.letter {
+  display: none;
+  text-align: left;
+}
+
+.letter.show {
+  display: block;
+  animation: fadeIn 0.7s ease;
+}
+
+.letter p {
+  margin: 14px 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* GALLERY */
+
+.gallery-section {
+  background: #fff8fbea;
+}
+
+.gallery {
+  max-width: 1000px;
+  margin: 35px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.photo-card {
+  padding: 10px 10px 18px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px #9c466b16;
+  transform: rotate(-1deg);
+  transition: 0.3s;
+}
+
+.photo-card:nth-child(2) {
+  transform: rotate(1.5deg);
+}
+
+.photo-card:hover {
+  transform: translateY(-5px) rotate(0);
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 9px;
+  background: #f9dce8;
+}
+
+.photo-card p {
+  padding-top: 12px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.6rem;
+}
+
+/* MUSIC */
+
+.music-section {
+  background: #fff0f6e8;
+}
+
+.music-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  animation: gentleFloat 2s infinite;
+}
+
+#music-status {
+  margin-top: 12px;
+  font-size: 0.9rem;
+}
+
+/* ENDING */
+
+.ending {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #fbd8e6ed, #fff5f8ed, #fcebdced);
+}
+
+.ending h2 {
+  color: var(--pink);
+}
+
+.big-flowers {
+  font-size: 2rem;
+  margin: 18px 0;
+  letter-spacing: 4px;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 22px 15px;
+  font-size: 0.8rem;
+  background: #fff7fa;
+  color: #986b7e;
+}
+
+/* CONFETTI */
+
+.confetti {
+  position: fixed;
+  top: -15px;
+  z-index: 100;
+  pointer-events: none;
+  animation: confettiFall 3.5s linear forwards;
+}
+
+@keyframes confettiFall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  section {
+    padding: 65px 16px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+    max-width: 330px;
+  }
+
+  .photo-card img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .time-box {
+    min-width: 70px;
+    padding: 14px 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Only four tiny flowers float in the background -->
+<div class="bg-flowers" aria-hidden="true">
+  <span class="bg-flower" style="left:12%;animation-duration:22s;">🌷</span>
+  <span class="bg-flower" style="left:78%;animation-duration:26s;animation-delay:5s;">🤍</span>
+  <span class="bg-flower" style="left:45%;animation-duration:24s;animation-delay:10s;">🌷</span>
+  <span class="bg-flower" style="left:90%;animation-duration:28s;animation-delay:3s;">💮</span>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="kicker">A little surprise made just for you</div>
+
+  <h1>Happy Birthday</h1>
+  <h2>Dear Sakshi 💗</h2>
+
+  <div class="flower-row">🌷 🤍</div>
+
+  <p>
+    Today is all about celebrating you, your beautiful smile,
+    and the happiness you bring into the world.
+    May your day bloom with joy, laughter, and lovely surprises.
+  </p>
+
+  <a class="btn" href="#memory">Our Special Memory ✨</a>
+
+  <div class="scroll-note">Scroll down for your surprise ↓</div>
+</section>
+
+<!-- MEMORY -->
+<section id="memory">
+  <h2>One Special Memory ✧</h2>
+
+  <div class="card">
+    <div class="memory-flower">🌷</div>
+
+    <div class="memory-date">December 24, 2024</div>
+
+    <p>
+      Some dates stay special because of the memories connected to them.
+      This is one of those moments worth remembering.
+      No matter how much time passes, beautiful memories deserve
+      a special place in our hearts.
+    </p>
+
+    <p style="margin-top:18px;">
+      <span class="script" style="font-size:2rem;color:#d94f87;">
+        A memory to treasure
+      </span>
+    </p>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="countdown-section" id="countdown">
+  <h2>Countdown to Your Birthday 🎂</h2>
+  <p>Let the birthday magic begin!</p>
+
+  <div class="countdown">
+    <div class="time-box">
+      <span id="days">00</span>
+      <small>Days</small>
+    </div>
+
+    <div class="time-box">
+      <span id="hours">00</span>
+      <small>Hours</small>
+    </div>
+
+    <div class="time-box">
+      <span id="minutes">00</span>
+      <small>Minutes</small>
+    </div>
+
+    <div class="time-box">
+      <span id="seconds">00</span>
+      <small>Seconds</small>
+    </div>
+  </div>
+
+  <p id="countdownMessage">Counting down to October 28 🌷</p>
+</section>
+
+<!-- LETTER -->
+<section id="letter-section">
+  <h2>A Little Birthday Letter 💌</h2>
+  <p>There's a special message waiting for you.</p>
+
+  <button class="btn" id="letterButton" onclick="toggleLetter()">
+    Open Your Letter 💗
+  </button>
+
+  <div class="card letter" id="birthdayLetter">
+    <p>Dear Sakshi,</p>
+
+    <p>
+      Happy Birthday! I hope this new year of your life brings you
+      countless reasons to smile, wonderful opportunities, and
+      memories that make you happy whenever you look back on them.
+    </p>
+
+    <p>
+      May your days be as lovely as tulips in spring and as graceful
+      as lilies in bloom. Keep being yourself, keep dreaming big,
+      and never forget that you deserve happiness and kindness.
+    </p>
+
+    <p>
+      Wishing you laughter, peace, success, and beautiful surprises
+      today and throughout the year ahead.
+    </p>
+
+    <p style="text-align:right;">
+      With warm birthday wishes 💗<br>
+      <span class="script" style="font-size:2rem;">Happy Birthday!</span>
+    </p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section" id="gallery">
+  <h2>Little Moments, Lovely Memories 📸</h2>
+  <p>A little gallery to make your birthday page more special.</p>
+
+  <div class="gallery">
+    <div class="photo-card">
+      <img src="photo1.jpg" alt="A special memory" loading="lazy">
+      <p>A lovely moment</p>
+    </div>
+
+    <div class="photo-card">
+      <img src="photo2.jpg" alt="A happy memory" loading="lazy">
+      <p>Beautiful memories</p>
+    </div>
+
+    <div class="photo-card">
+      <img src="photo3.jpg" alt="A treasured moment" loading="lazy">
+      <p>Worth remembering</p>
+    </div>
+  </div>
+</section>
+
+<!-- MUSIC -->
+<section class="music-section" id="music">
+  <h2>A Little Music for You 🎶</h2>
+
+  <div class="card">
+    <div class="music-icon">🎵</div>
+
+    <p>
+      Press play and enjoy a little birthday soundtrack
+      while exploring your surprise.
+    </p>
+
+    <button class="btn" id="musicButton" onclick="toggleMusic()">
+      ▶ Play Birthday Music
+    </button>
+
+    <p id="music-status">Tap play to start the music.</p>
+  </div>
+
+  <audio id="birthdayMusic" loop preload="auto">
+    <source src="birthday-song.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+</section>
+
+<!-- ENDING -->
+<section class="ending" id="final">
+  <h2 class="script" style="font-size:clamp(3rem,9vw,5rem);">
+    Happy Birthday, Sakshi!
+  </h2>
+
+  <div class="big-flowers">🌷🤍</div>
+
+  <p>
+    May your life bloom with happiness, laughter,
+    and beautiful new beginnings.
+  </p>
+
+  <button class="btn" onclick="celebrate()">One Last Surprise ✨</button>
+
+  <p id="finalMessage" style="margin-top:15px;"></p>
+</section>
+
+<footer>
+  Made especially for Sakshi 🌷 With warm birthday wishes 💗
+</footer>
+
+<script>
+/* Countdown to October 28 */
+function updateCountdown() {
+  const now = new Date();
+  let year = now.getFullYear();
+  let birthday = new Date(year, 9, 28, 0, 0, 0);
+
+  if (now > birthday && now.toDateString() !== birthday.toDateString()) {
+    birthday = new Date(year + 1, 9, 28, 0, 0, 0);
+  }
+
+  const difference = birthday.getTime() - now.getTime();
+
+  if (difference <= 0) {
+    document.getElementById("days").textContent = "00";
+    document.getElementById("hours").textContent = "00";
+    document.getElementById("minutes").textContent = "00";
+    document.getElementById("seconds").textContent = "00";
+    document.getElementById("countdownMessage").textContent =
+      "Happy Birthday, Sakshi! 🎂";
+    return;
+  }
+
+  document.getElementById("days").textContent =
+    Math.floor(difference / 86400000);
+
+  document.getElementById("hours").textContent =
+    Math.floor((difference / 3600000) % 24);
+
+  document.getElementById("minutes").textContent =
+    Math.floor((difference / 60000) % 60);
+
+  document.getElementById("seconds").textContent =
+    Math.floor((difference / 1000) % 60);
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+/* Birthday letter */
+function toggleLetter() {
+  const letter = document.getElementById("birthdayLetter");
+  const button = document.getElementById("letterButton");
+
+  letter.classList.toggle("show");
+
+  if (letter.classList.contains("show")) {
+    button.textContent = "Close Your Letter 💌";
+    letter.scrollIntoView({ behavior: "smooth", block: "center" });
+  } else {
+    button.textContent = "Open Your Letter 💗";
+  }
+}
+
+/* Music player */
+const birthdayMusic = document.getElementById("birthdayMusic");
+const musicButton = document.getElementById("musicButton");
+const musicStatus = document.getElementById("music-status");
+
+async function toggleMusic() {
+  if (birthdayMusic.paused) {
+    try {
+      await birthdayMusic.play();
+      musicButton.textContent = "❚❚ Pause Birthday Music";
+      musicStatus.textContent = "Now playing 🎶";
+    } catch (error) {
+      musicStatus.textContent =
+        "Music could not start. Check birthday-song.mp3 is in the same folder.";
+    }
+  } else {
+    birthdayMusic.pause();
+    musicButton.textContent = "▶ Play Birthday Music";
+    musicStatus.textContent = "Music paused.";
+  }
+}
+
+/* Birthday confetti */
+function celebrate() {
+  const symbols = ["✨", "💗", "🎉", "🌷", "🤍"];
+  const finalMessage = document.getElementById("finalMessage");
+
+  finalMessage.textContent =
+    "Wishing you the happiest birthday ever, Sakshi! 💗";
+
+  for (let i = 0; i < 45; i++) {
+    const piece = document.createElement("span");
+    piece.className = "confetti";
+    piece.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    piece.style.left = Math.random() * 100 + "vw";
+    piece.style.fontSize = (14 + Math.random() * 15) + "px";
+    piece.style.animationDelay = Math.random() + "s";
+
+    document.body.appendChild(piece);
+    setTimeout(() => piece.remove(), 5000);
+  }
+}
+</script>
+
+</body>
+</html>
